@@ -1,0 +1,360 @@
+services:
+  discovery:
+    build: https://github.com/francescodonnini/b4_discovery.git
+    networks:
+      test:
+        ipv4_address: 10.0.0.253
+    ports:
+      - 5100:5050
+    environment:
+      - LOGGING_ENABLED=1
+      - PORT=5050
+
+  node1:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.1
+    ports:
+      - 5001:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node2:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.2
+    ports:
+      - 5002:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node3:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.3
+    ports:
+      - 5003:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node4:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.4
+    ports:
+      - 5004:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node5:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.5
+    ports:
+      - 5005:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node6:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.6
+    ports:
+      - 5006:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node7:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.7
+    ports:
+      - 5007:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node8:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.8
+    ports:
+      - 5008:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node9:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.9
+    ports:
+      - 5009:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node10:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.10
+    ports:
+      - 5010:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+      
+  node11:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.11
+    ports:
+      - 5011:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node12:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.12
+    ports:
+      - 5012:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node13:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.13
+    ports:
+      - 5013:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node14:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.14
+    ports:
+      - 5014:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node15:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.15
+    ports:
+      - 5015:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node16:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.16
+    ports:
+      - 5016:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node17:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.17
+    ports:
+      - 5017:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node18:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.18
+    ports:
+      - 5018:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+  node19:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.19
+    ports:
+      - 5019:5050
+    environment:
+      - LOGGING_ENABLED=1
+    env_file:
+      - .env
+
+  node20:
+    build: https://github.com/francescodonnini/b4.git
+    depends_on:
+      - discovery
+    tty: true
+    cap_add:
+    - NET_ADMIN
+    networks:
+      test:
+        ipv4_address: 10.0.0.20
+    ports:
+      - 5020:5050
+    environment:
+      - LOGGING_ENABLED=0
+    env_file:
+      - .env
+
+networks:
+  test:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/24
+          gateway: 10.0.0.254
+
